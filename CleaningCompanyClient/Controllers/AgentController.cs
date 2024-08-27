@@ -25,10 +25,5 @@ namespace CleaningCompanyClient.Controllers
             List<AgentModel> Agents = await respons.Content.ReadFromJsonAsync<List<AgentModel>>();
             return View(Agents);
         }
-
-        //public async Task<IActionResult> ShouAll()
-        //{
-        //    return View(generalViewModel.ShouAllmissions());
-        //}
     }
 }

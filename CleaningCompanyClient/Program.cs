@@ -27,6 +27,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Agent}/{action=ShouAllAgents}/{id?}");
+    pattern: "{controller=GetAllController1}/{action=SouwAllMenegmant}/{id?}");
 
 app.Run();

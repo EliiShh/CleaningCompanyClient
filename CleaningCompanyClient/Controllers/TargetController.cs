@@ -23,5 +23,6 @@ namespace CleaningCompanyClient.Controllers
             List<TargetModel> Targets = await respons.Content.ReadFromJsonAsync<List<TargetModel>>();
             return View(Targets);
         }
+
     }
 }

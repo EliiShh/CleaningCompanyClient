@@ -1,24 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CleaningCompany.Utils;
 
 namespace CleaningCompanyClient.Models
 {
     public class GeneralViewModel
     {
-        private readonly HttpClient _httpClient;
-        private readonly string urlAPI = "http://localhost:5147/missions";
-        public GeneralViewModel(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
+        public string angetsCount { get; set; }
+        public string angetsToActivCount { get; set; }
 
-        //public List<MissionModel> vcvc { get { return ShouAllAgents(); }}
+        public string targetsCount { get; set; }
 
-        public async Task<List<MissionModel>> ShouAllmissions()
-        {
-            var respons = await _httpClient.GetAsync(urlAPI);
-            respons.EnsureSuccessStatusCode();
-            List<MissionModel> missions = await respons.Content.ReadFromJsonAsync<List<MissionModel>>();
-            return missions;
-        }
+        public string targetsToFinishCount { get; set; }
+
+        public string missionCount { get; set; }
+
+        public string missionToActivCount { get; set; }
+
+        public string RelationAgentsTargets { get; set; }
+
+        public string RelationAgentsTargetsInActiv { get; set; }
     }
 }

@@ -1,0 +1,92 @@
+﻿@model IEnumerable<CleaningCompanyClient.Models.getAllModel>
+
+@{
+    ViewData["Title"] = "ShouAllMissionsPersonel";
+}
+
+<h1>ShouAllMissionsPersonel</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MissionId)
+            </th>
+            <th>
+                distance
+            </th>
+            <th>
+                time
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentNickname)
+            </th>
+            <th>
+                X,Y
+            </th>
+            <th>
+                Agent img
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Targetname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Targetposition)
+            </th>
+            <th>
+               X,Y
+            </th>
+            <th>
+                Target img
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionTimeLeft)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MissionExecutionTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentNickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgentlocX)
+                @Html.DisplayFor(modelItem => item.AgentlocY)
+            </td>
+            <td>
+                    <img src="@item.AgentphotoUrl" alt="Italian Trulli">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Targetname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Targetposition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetlocX)
+                @Html.DisplayFor(modelItem => item.TargetlocY)
+            </td>
+            <td>
+                <img src="@item.TargetphotoUrl" alt="Italian Trulli">
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.MissionId">
+                        assigned
+                </a>
+@*                 @Html.ActionLink("assigned", "Edit", new { id=item.MissionId }) *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

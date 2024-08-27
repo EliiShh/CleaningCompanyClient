@@ -1,0 +1,67 @@
+﻿@model CleaningCompanyClient.Models.GeneralViewModel
+
+@{
+    ViewData["Title"] = "SouwAllMenegmant";
+}
+
+<h1>Menegmant</h1>
+
+<div>
+    <h4>General</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.angetsCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.angetsCount)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.angetsToActivCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.angetsToActivCount)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.targetsCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.targetsCount)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.targetsToFinishCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.targetsToFinishCount)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.missionCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.missionCount)
+        </dd>
+        <dt class = "col-sm-10">
+            @Html.DisplayNameFor(model => model.missionToActivCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.missionToActivCount)
+        </dd>
+        <dt class = "col-sm10">
+            @Html.DisplayNameFor(model => model.RelationAgentsTargets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RelationAgentsTargets)
+        </dd>
+        <dt class = "col-sm-10">
+            RelationAgentsTargetsInActiv
+@*             @Html.DisplayNameFor(model => model.RelationAgentsTargetsInActiv)
+ *@        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RelationAgentsTargetsInActiv)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
